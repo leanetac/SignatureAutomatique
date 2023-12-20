@@ -10,8 +10,8 @@
   <DefaultLocale>fr-FR</DefaultLocale>
   <DisplayName DefaultValue="Signature Automatique" />
   <Description DefaultValue="Insertion automatique de la signature de mail provenant de la plateforme de contact" />
-  <IconUrl DefaultValue="https://www.contoso.com/assets/icon-64.png" />
-  <HighResolutionIconUrl DefaultValue="https://www.contoso.com/assets/icon-128.png" />
+  <IconUrl DefaultValue="https://leanetac.github.io/SignatureAutomatique/assets/icon-64.png" />
+  <HighResolutionIconUrl DefaultValue="https://leanetac.github.io/SignatureAutomatique/assets/icon-128.png" />
   <SupportUrl DefaultValue="https://www.contoso.com/help" />
   <AppDomains>
     <AppDomain>https://vcard.thinkad.club</AppDomain>
@@ -27,7 +27,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://www.contoso.com/commands.html" />
+        <SourceLocation DefaultValue="https://leanetac.github.io/SignatureAutomatique/src/commands/commands.html" />
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -59,19 +59,19 @@
 						  <OfficeTab id="TabDefault">
 							  <Group id="msgComposeCmdGroup">
 								  <Label resid="GroupLabel" />
-								  <Control xsi:type="Button" id="btnTaskpane">
-									  <Label resid="TaskpaneButton.Label" />
+								  <Control xsi:type="Button" id="btnInsertionSignature">
+									  <Label resid="FunctionButton.Label" />
 									  <Supertip>
-										  <Title resid="TaskpaneButton.Title" />
-										  <Description resid="TaskpaneButton.Tooltip" />
+										  <Title resid="FunctionButton.Title" />
+										  <Description resid="FunctionButton.Tooltip" />
 									  </Supertip>
 									  <Icon>
 										  <bt:Image size="16" resid="Icon.16x16" />
 										  <bt:Image size="32" resid="Icon.32x32" />
-										  <bt:Image size="64" resid="Icon.64x64" />
+										  <bt:Image size="80" resid="Icon.80x80" />
 									  </Icon>
-									  <Action xsi:type="ShowTaskpane">
-										<SourceLocation resid="Taskpane.Url" />
+									  <Action xsi:type="ExecuteFunction">
+										  <FunctionName>action</FunctionName>
 									  </Action>
 								  </Control>
 							  </Group>
@@ -91,16 +91,16 @@
 		  </Hosts>
 		  <Resources>
 			  <bt:Images>
-				  <bt:Image id="Icon.16x16" DefaultValue="https://www.contoso.com/assets/icon-16.png" />
-				  <bt:Image id="Icon.32x32" DefaultValue="https://www.contoso.com/assets/icon-32.png" />
-				  <bt:Image id="Icon.80x80" DefaultValue="https://www.contoso.com/assets/icon-80.png" />
+				  <bt:Image id="Icon.16x16" DefaultValue="https://leanetac.github.io/SignatureAutomatique/assets/icon-16.png" />
+				  <bt:Image id="Icon.32x32" DefaultValue="https://leanetac.github.io/SignatureAutomatique/assets/icon-32.png" />
+				  <bt:Image id="Icon.80x80" DefaultValue="https://leanetac.github.io/SignatureAutomatique/assets/icon-80.png" />
 			  </bt:Images>
 			  <bt:Urls>
-				  <bt:Url id="Commands.Url" DefaultValue="https://www.contoso.com/commands.html" />
-				  <bt:Url id="WebViewRuntime.Url" DefaultValue="https://www.contoso.com/commands.html" />
-				  <bt:Url id="Taskpane.Url" DefaultValue="https://www.contoso.com/taskpane.html" />
+				  <bt:Url id="Commands.Url" DefaultValue="https://leanetac.github.io/SignatureAutomatique/src/commands/commands.html" />
+				  <bt:Url id="WebViewRuntime.Url" DefaultValue="https://leanetac.github.io/SignatureAutomatique/src/commands/commands.html" />
+				  <bt:Url id="Taskpane.Url" DefaultValue="https://leanetac.github.io/SignatureAutomatique/src/taskpane/taskpane.html" />
 				  <!-- Entry needed for Outlook on Windows. -->
-				  <bt:Url id="JSRuntime.Url" DefaultValue="https://www.contoso.com/launchevent.js" />
+				  <bt:Url id="JSRuntime.Url" DefaultValue="https://leanetac.github.io/SignatureAutomatique/src/launchevent/launchevent.js" />
 			  </bt:Urls>
 			  <bt:ShortStrings>
 				  <bt:String id="GroupLabel" DefaultValue="Signature Vcard" />

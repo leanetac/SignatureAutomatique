@@ -27,7 +27,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://leanetac.github.io/SignatureAutomatique/commands.html" />
+        <SourceLocation DefaultValue="https://leanetac.github.io/SignatureAutomatique/src/commands/commands.html" />
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -96,11 +96,11 @@
 				  <bt:Image id="Icon.80x80" DefaultValue="https://leanetac.github.io/SignatureAutomatique/assets/icon-80.png" />
 			  </bt:Images>
 			  <bt:Urls>
-				  <bt:Url id="Commands.Url" DefaultValue="https://leanetac.github.io/SignatureAutomatique/commands.html" />
-				  <bt:Url id="WebViewRuntime.Url" DefaultValue="https://leanetac.github.io/SignatureAutomatique/commands.html" />
-				  <bt:Url id="Taskpane.Url" DefaultValue="https://leanetac.github.io/SignatureAutomatique/taskpane.html" />
+				  <bt:Url id="Commands.Url" DefaultValue="https://leanetac.github.io/SignatureAutomatique/src/commands/commands.html" />
+				  <bt:Url id="WebViewRuntime.Url" DefaultValue="https://leanetac.github.io/SignatureAutomatique/src/commands/commands.html" />
+				  <bt:Url id="Taskpane.Url" DefaultValue="https://leanetac.github.io/SignatureAutomatique/src/taskpane/taskpane.html" />
 				  <!-- Entry needed for Outlook on Windows. -->
-				  <bt:Url id="JSRuntime.Url" DefaultValue="https://leanetac.github.io/SignatureAutomatique/launchevent.js" />
+				  <bt:Url id="JSRuntime.Url" DefaultValue="https://leanetac.github.io/SignatureAutomatique/src/launchevent/launchevent.js" />
 			  </bt:Urls>
 			  <bt:ShortStrings>
 				  <bt:String id="GroupLabel" DefaultValue="Signature Vcard" />

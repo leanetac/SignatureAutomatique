@@ -3,21 +3,21 @@ Office.onReady(() => {
 });
 
 /**
- * Récupération de la signature de l'utilisateur sur la plateforme de contact
+ * Recuperation de la signature de l'utilisateur sur la plateforme de contact
  * @param event {Office.AddinCommands.Event}
  */
 function action(event) {
 
 	let _settings = Office.context.roamingSettings;
 
-	// Récupération de la signature
+	// Recuperation de la signature
 	jQuery.ajax({
 		url: 'https://vcard.thinkad.club/api/index.php',
 		method: 'POST',
 		jsonp: true,
 		data: {'mail': Office.context.mailbox.userProfile.emailAddress},
 		success: (resp) => {
-			// Sauvegarde de la signature dans les paramètres de l'Add-in
+			// Sauvegarde de la signature dans les paramï¿½tres de l'Add-in
 			_settings.set('tmplSignature', 'signatureVcard');
 			_settings.set('signatureContent', resp);
 			_settings.saveAsync();
@@ -36,13 +36,13 @@ function action(event) {
  * @param event {Office.AddinCommands.Event}
  */
 function deleteSignature(event) {
-	// On supprime le template et le contenu de la signature des paramètres de l'Add-in
+	// On supprime le template et le contenu de la signature des paramï¿½tres de l'Add-in
 	let _settings = Office.context.roamingSettings;
 	_settings.remove('tmplSignature');
 	_settings.remove('signatureContent');
 	_settings.saveAsync();
 
-	// On enlève la signature du mail
+	// On enlï¿½ve la signature du mail
 	Office.context.mailbox.item.body.setAsync
 		(
 			"",
@@ -97,7 +97,7 @@ function set_signature(str)
 }
 
 /**
- * Définition du lieu d'insertion de la signature
+ * Dï¿½finition du lieu d'insertion de la signature
  * @param {any} str Contenu de la signature
  */
 function insert_signature(str)

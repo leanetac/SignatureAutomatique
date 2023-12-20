@@ -1,15 +1,15 @@
-// Fonction s'exécutant lors de la composition d'un nouveau message (newMail, reply)
+// Fonction s'executant lors de la composition d'un nouveau message (newMail, reply)
 function onNewMessageComposeHandler(event) {
-    // On récupère les paramètres de l'Add-in spécifiques à l'utilisateur
+    // On recupere les parametres de l'Add-in specifiques a l'utilisateur
     let _settings = Office.context.roamingSettings;
     let tmplSignature = _settings.get('tmplSignature');
     let signatureContent = _settings.get('signatureContent');
 
     if (tmplSignature == "signatureVcard" ) {
-        // Si une signature a déjà été enregistrée, on l'applique
+        // Si une signature a deja ete enregistree, on l'applique
         set_signature(signatureContent);
     } else {
-        // Sinon on récupère la signature sur la plateforme de contact
+        // Sinon on recupere la signature sur la plateforme de contact
         var xhr = new XMLHttpRequest();
 
         xhr.addEventListener("readystatechange", function () {

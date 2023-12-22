@@ -86,7 +86,16 @@
 						  <!-- Identifies the runtime to be used (also referenced by the Runtime element). -->
 						  <SourceLocation resid="WebViewRuntime.Url" />
 					  </ExtensionPoint>
-				  </DesktopFormFactor>
+					</DesktopFormFactor>
+					<MobileFormFactor>
+					  <ExtensionPoint xsi:type="LaunchEvent">
+						  <LaunchEvents>
+							  <LaunchEvent Type="OnNewMessageCompose" FunctionName="onNewMessageComposeHandler" />
+						  </LaunchEvents>
+						  <!-- Identifies the runtime to be used (also referenced by the Runtime element). -->
+						  <SourceLocation resid="WebViewRuntime.Url" />
+					  </ExtensionPoint>
+				  </MobileFormFactor>
 			  </Host>
 		  </Hosts>
 		  <Resources>

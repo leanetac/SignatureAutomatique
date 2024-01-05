@@ -38,6 +38,6 @@ function set_signature(str) {
     );
 }
 
-if (Office.context.platform === Office.PlatformType.PC || Office.context.platform == undefined || Office.context.platform == null) {
+// if (Office.context.platform === Office.PlatformType.PC || Office.context.platform == undefined || Office.context.platform == null) {
     Office.actions.associate("onNewMessageComposeHandler", onNewMessageComposeHandler);
-}
+// }
